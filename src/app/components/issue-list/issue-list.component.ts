@@ -24,7 +24,7 @@ export class IssueListComponent implements OnInit {
       return x.issue_name;
     }).indexOf(data.issue_name));
     return this.bugService.DeleteBug(data.id).subscribe((res) => {
-      this.IssuesList.splice(index, 1);
+      this.loadEmployees();
       console.log('Issue deleted!');
     });
   }
